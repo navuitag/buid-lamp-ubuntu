@@ -196,3 +196,12 @@ server {
   ssh-add ~/.ssh/id_ed25519
   cat ~/.ssh/id_ed25519.pub
 ~~~
+
+### 5. Clean Linux
+
+~~~bash
+sudo apt-get clean
+sudo apt-get autoclean
+sudo apt-get autoremove
+sudo journalctl --vacuum-size 10M
+~~~
