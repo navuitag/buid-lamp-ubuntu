@@ -122,6 +122,7 @@ server {
 
     server_name pentest.kentridge.health;
     root /var/www/alice-web2/public;
+    #return 301 https://$host$request_uri;
 
     error_log /var/log/nginx/error.log;
     access_log /var/log/nginx/access.log;
