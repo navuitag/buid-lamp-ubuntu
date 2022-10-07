@@ -73,6 +73,7 @@ add_header X-Frame-Options "DENY";
 add_header X-Content-Type-Options nosniff;
 add_header X-XSS-Protection "1; mode=block";
 add_header 'Access-Control-Allow-Origin' '*';
+#add_header Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com connect.facebook.net www.googleadservices.com www.google-analytics.com googleads.g.doubleclick.net onesignal.com tpc.googlesyndication.com;"; # use for WordPress
 add_header Content-Security-Policy "default-src 'self'; font-src *; img-src *; script-src 'self' 'unsafe-inline'; style-src *";
 add_header Referrer-Policy strict-origin;
 add_header X-Permitted-Cross-Domain-Policies master-only;
