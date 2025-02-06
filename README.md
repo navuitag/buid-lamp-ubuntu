@@ -207,3 +207,31 @@ sudo apt-get autoclean
 sudo apt-get autoremove
 sudo journalctl --vacuum-size 10M
 ~~~
+
+### 6. Add new user
+
+~~~bash
+adduser alice
+cat /etc/passwd | grep alice
+groups alice
+usermod -aG sudo alice
+id alice
+groups alice
+~~~
+
+### 7. MySQL
+
+- Create new database
+
+~~~bash
+CREATE DATABASE `DB name` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+~~~
+
+- Create a new user and grant permission
+
+~~~bash
+USE `DB name`;
+CREATE USER 'DB user'@'%' IDENTIFIED WITH mysql_native_password BY 'P@ssword!123#';
+GRANT ALL ON `DB name`.* TO 'DB user'@'%';
+FLUSH PRIVILEGES;
+~~~
